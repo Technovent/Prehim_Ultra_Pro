@@ -1,4 +1,4 @@
-<app-investment-category *ngIf="isActiveProduct('chaldal')">
+<app-investment-category *ngIf="isActiveProduct('chaldal')" investLogo="usero.jpeg">
   <div class="h-full w-full border border-blue-500" *ngIf="!isActiveLeft('right')">
     <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQPXXhTYKjYSTFt35bER5YbHug1FNJQfvxC8H5P3lrgsoSBLgRTIzzaui4rOaZvsqp2hPIwrvgMGuJe/pubchart?oid=1611073218&amp;format=interactive"></iframe>  </div>
   <div class="h-full w-full border border-blue-500">
@@ -9,7 +9,7 @@
   </div>
 
 </app-investment-category>
-<app-investment-category>
+<app-investment-category investLogo="usero.jpeg" *ngIf="isActiveProduct('chaldal')">
   <div class="h-full w-full border border-blue-500" *ngIf="!isActiveLeft('right')">
     <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQPXXhTYKjYSTFt35bER5YbHug1FNJQfvxC8H5P3lrgsoSBLgRTIzzaui4rOaZvsqp2hPIwrvgMGuJe/pubchart?oid=1611073218&amp;format=interactive"></iframe>  </div>
   <div class="h-full w-full border border-blue-500">
@@ -21,3 +21,10 @@
 
 </app-investment-category>
 
+<div class="w-full py-4 flex items-center justify-center" *ngIf="!tableShow">
+  <app-button buttonText="CLick For Invest" (click)="onClick()"></app-button>
+</div>
+<app-list *ngIf="tableShow"></app-list>
+<div class="w-full py-4 flex items-center justify-center" *ngIf="tableShow">
+  <app-button buttonText="Hide {{'Company'}} Lists" (click)="onClickHide()"></app-button>
+</div>

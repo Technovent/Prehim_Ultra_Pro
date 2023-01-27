@@ -1,0 +1,42 @@
+<div class="m-4 rounded-lg border border-blue-500 overflow-hidden">
+  <div>
+    <div class="flex items-center justify-center py-2 px-4 bg-blue-500 text-white font-bold">
+      <h3><i class="fa-solid fa-list mr-2"></i>Mutual Fund Data Table</h3>
+    </div>
+    <div class=" border border-blue-500 max-h-96 overflow-y-auto">
+      <table class="table-auto w-full">
+        <thead class="bg-white">
+        <tr class="border-b border-blue-500 whitespace-nowrap text-left sticky top-0 bg-white z-10">
+          <th>Company Name</th>
+          <th>Compound Return</th>
+          <th>Latest Nav</th>
+          <th>Risk</th>
+          <th>Application Amount</th>
+          <th>Investor Retun</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <ng-container *ngFor="let company of mutualFundData">
+          <tr class="whitespace-nowrap">
+            <td>{{company.mutualFundName}}</td>
+            <td>{{company.avgAnnualCompoundReturn}}</td>
+            <td>{{company.latestNav}}</td>
+            <td>{{company.risk}}</td>
+            <td>{{company.minApplicationAmount}}</td>
+            <td>{{company.investorReturn}}</td>
+            <td >
+              <a href="http://localhost:1234/PollingStation">
+                <app-button buttonType="button" buttonText="Invest">
+                </app-button>
+              </a>
+            </td>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

@@ -9,6 +9,7 @@ import { InvestmentCategoryComponent } from './investment-category/investment-ca
 import { InputTextComponent } from './input-text/input-text.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ListComponent} from "./list/list.component";
+import { MutualListComponent } from './mutual-list/mutual-list.component';
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -17,7 +18,8 @@ import {ListComponent} from "./list/list.component";
         TutorialComponent,
         InvestmentCategoryComponent,
         InputTextComponent,
-        ListComponent
+        ListComponent,
+        MutualListComponent
     ],
     exports: [
         NavbarComponent,
@@ -26,7 +28,8 @@ import {ListComponent} from "./list/list.component";
         InputTextComponent,
         ButtonComponent,
         InvestmentCategoryComponent,
-        ListComponent
+        ListComponent,
+        MutualListComponent
     ],
     imports: [
         CommonModule,

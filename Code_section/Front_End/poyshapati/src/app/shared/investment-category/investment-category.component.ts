@@ -9,11 +9,11 @@ export class InvestmentCategoryComponent implements OnInit{
   @Input() organizationName: string = 'Chaldal';
   graphs: any[] = Array(3);
   tableShow: boolean;
+  @Input() investLogo: any;
 
   ngOnInit() {
     localStorage.setItem('hidden', 'left')
   }
-
   onClickLeftIcon() {
     localStorage.setItem('hidden', 'left')
   }
@@ -22,19 +22,7 @@ export class InvestmentCategoryComponent implements OnInit{
     localStorage.setItem('hidden', 'right')
   }
 
-  isActiveRight(right: string) {
-    return localStorage.getItem('hidden') === right
-  }
-
   isActiveLeft(left: string) {
     return localStorage.getItem('hidden') === left
-  }
-
-  onClick() {
-    this.tableShow = true
-  }
-
-  onClickHide() {
-    this.tableShow = false
   }
 }

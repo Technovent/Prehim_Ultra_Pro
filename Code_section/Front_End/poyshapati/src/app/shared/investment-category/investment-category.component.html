@@ -5,7 +5,7 @@
   <div class="grid grid-cols-2 gap-4 p-4">
       <ng-content></ng-content>
   </div>
-  <button (click)="onClickLeftIcon()" *ngIf="isActiveRight('right')" class="absolute w-8 h-8 bg-blue-500 left-2 top-1/2 transform -translate-y-1/2">
+  <button (click)="onClickLeftIcon()" *ngIf="!isActiveLeft('left')" class="absolute w-8 h-8 bg-blue-500 left-2 top-1/2 transform -translate-y-1/2">
     <i class="fa-solid fa-angle-left"></i>
   </button>
   <button (click)="onClickRightIcon()" *ngIf="isActiveLeft('left')" class="absolute w-8 h-8 bg-blue-500 right-2 top-1/2 transform -translate-y-1/2">
@@ -19,29 +19,23 @@
   </div>
   <div class="grid grid-cols-3  gap-4 p-4 place-items-center">
     <div class=" border border-blue-500 rounded-lg p-4">
-      <div>
-        <img src="https://picsum.photos/200" alt="">
+      <div class="h-48 object-cover object-center">
+        <img class="h-full w-full" src="./assets/images/usero.jpeg" alt="">
       </div>
       <h2 class="font-bold text-center">Expert Opinion</h2>
     </div>
     <div class=" border border-blue-500 rounded-lg p-4">
-      <div>
-        <img src="https://picsum.photos/200" alt="">
+      <div class="h-48 object-cover object-center">
+        <img class="h-full w-full" src="./assets/images/fintech.webp" alt="">
       </div>
-      <h2 class="font-bold text-center">Expert Opinion</h2>
+      <h2 class="font-bold text-center">Survibe in economic transformation</h2>
     </div>
     <div class=" border border-blue-500 rounded-lg p-4">
-      <div>
-        <img src="https://picsum.photos/200" alt="">
+      <div class="h-48 object-cover object-center">
+        <img class="h-full w-full" src="./assets/images/tutorial.avif" alt="">
       </div>
-      <h2 class="font-bold text-center">Expert Opinion</h2>
+      <h2 class="font-bold text-center">Tutorial</h2>
     </div>
   </div>
 </div>
-<div class="w-full py-4 flex items-center justify-center" *ngIf="!tableShow">
-  <app-button buttonText="CLick For Invest" (click)="onClick()"></app-button>
-</div>
-<app-list *ngIf="tableShow"></app-list>
-<div class="w-full py-4 flex items-center justify-center" *ngIf="tableShow">
-  <app-button buttonText="Hide {{'Company'}} Lists" (click)="onClickHide()"></app-button>
-</div>
+

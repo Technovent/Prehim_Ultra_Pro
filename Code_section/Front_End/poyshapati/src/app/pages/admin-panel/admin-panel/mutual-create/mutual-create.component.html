@@ -1,0 +1,17 @@
+<div class="p-4">
+  <div class="w-full border border-blue-500 rounded rounded-lg">
+    <div class="px-2 py-2 bg-blue-500 text-white flex justify-center items-center font-bold">
+      <h3><i class="fa-solid fa-plus mr-2"></i>Add new Company</h3>
+    </div>
+    <form class="p-4 flex flex-col space-y-4" [formGroup]="mutualForm" (ngSubmit)="$onCreateNewCustomer(mutualForm)" >
+      <app-input-text inputType="text" label="Company Name" [control]="mutualForm.get('mutualFundName')"></app-input-text>
+      <app-input-text inputType="text" label="Gross Profit" [control]="mutualForm.get('avgAnnualCompoundReturn')"></app-input-text>
+      <app-input-text inputType="text" label="Net Profit" [control]="mutualForm.get('latestNav')"></app-input-text>
+      <app-input-text inputType="text" label="Valuation" [control]="mutualForm.get('risk')"></app-input-text>
+      <app-input-text inputType="text" label="Equity Sale Price" [control]="mutualForm.get('minApplicationAmount')"></app-input-text>
+      <app-input-text inputType="text" label="Equity Sale Price" [control]="mutualForm.get('investorReturn')"></app-input-text>
+      <app-button class="self-center" buttonText="Add Mutual Fund Data"></app-button>
+    </form>
+  </div>
+
+</div>

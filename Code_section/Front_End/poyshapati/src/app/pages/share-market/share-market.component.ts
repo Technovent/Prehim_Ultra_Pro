@@ -10,4 +10,5 @@ export class ShareMarketComponent {
   isActiveLeft(right: string) {
     return localStorage.getItem('hidden') === right
   }
+
 }

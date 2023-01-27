@@ -7,12 +7,14 @@ import { CreateComponent } from './admin-panel/create/create.component';
 import { ListComponent } from '../../shared/list/list.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../../shared/shared.module";
+import { MutualCreateComponent } from './admin-panel/mutual-create/mutual-create.component';
 
 
 @NgModule({
     declarations: [
         AdminPanelComponent,
         CreateComponent,
+        MutualCreateComponent,
     ],
     exports: [
     ],
