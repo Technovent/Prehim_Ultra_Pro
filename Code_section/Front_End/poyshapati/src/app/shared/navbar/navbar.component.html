@@ -1,0 +1,25 @@
+<section class="flex w-full">
+  <div>
+    <img src="assets/images/logo.png" alt="">
+  </div>
+  <nav>
+    <ul>
+      <li *ngFor="let menu of menus"><a>{{menu.name}}</a>
+        <ul *ngIf="menu?.children">
+          <li *ngFor="let subMenu of menu?.children">
+            <a>{{subMenu.name}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <app-button buttonText="Login">
+      <a href=""></a>
+    </app-button>
+  </nav>
+  <div class="flex space-x-2">
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+  </div>
+</section>
