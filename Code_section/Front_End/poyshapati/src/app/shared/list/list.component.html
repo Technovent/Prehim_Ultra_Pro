@@ -1,0 +1,39 @@
+<div class="m-4 rounded-lg border border-blue-500 overflow-hidden">
+  <div>
+    <div class="flex items-center justify-center py-2 px-4 bg-blue-500 text-white font-bold">
+      <h3><i class="fa-solid fa-list mr-2"></i>Company Data Table</h3>
+    </div>
+    <div class=" border border-blue-500 max-h-96 overflow-y-auto">
+      <table class="table-auto w-full">
+        <thead class="bg-white">
+        <tr class="border-b border-blue-500 whitespace-nowrap text-left sticky top-0 bg-white z-10">
+          <th>Company Name</th>
+          <th>Gross Profit</th>
+          <th>Net Profit</th>
+          <th>Valuation</th>
+          <th>Equity</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <ng-container *ngFor="let company of companyData">
+          <tr class="whitespace-nowrap">
+            <td>{{company.companyName}}</td>
+            <td>{{company.grossProfit}}</td>
+            <td>{{company.netProfit}}</td>
+            <td>{{company.valuation}}</td>
+            <td>{{company.equitySalePrice}}</td>
+            <td >
+              <app-button buttonType="button" buttonText="Invest">
+                <a href=""></a>
+              </app-button>
+            </td>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

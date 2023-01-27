@@ -16,8 +16,8 @@ export class NavbarComponent {
       url: "",
       children: [
         {
-          name: "General Investment",
-          url: "general-investment"
+          name: "Direct Investment",
+          url: "direct-invest"
         },
         {
           name: "Share Market",

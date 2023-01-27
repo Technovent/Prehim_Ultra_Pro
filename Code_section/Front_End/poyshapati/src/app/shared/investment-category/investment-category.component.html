@@ -1,1 +1,47 @@
-<p>investment-category works!</p>
+<div class="relative">
+  <div class="w-full bg-blue-500 text-white font-bold px-4 py-2 flex items-center justify-center">
+    <h2><i class="fa-solid fa-building mr-2"></i>{{organizationName}}</h2>
+  </div>
+  <div class="grid grid-cols-2 gap-4 p-4">
+      <ng-content></ng-content>
+  </div>
+  <button (click)="onClickLeftIcon()" *ngIf="isActiveRight('right')" class="absolute w-8 h-8 bg-blue-500 left-2 top-1/2 transform -translate-y-1/2">
+    <i class="fa-solid fa-angle-left"></i>
+  </button>
+  <button (click)="onClickRightIcon()" *ngIf="isActiveLeft('left')" class="absolute w-8 h-8 bg-blue-500 right-2 top-1/2 transform -translate-y-1/2">
+    <i class="fa-solid fa-angle-right"></i>
+  </button>
+
+</div>
+<div class="relative">
+  <div class="w-full bg-blue-500 text-white font-bold px-4 py-2 flex items-center justify-center">
+    <h2><i class="fa-solid fa-book mr-2"></i>Learn Investment With Poyshapati</h2>
+  </div>
+  <div class="grid grid-cols-3  gap-4 p-4 place-items-center">
+    <div class=" border border-blue-500 rounded-lg p-4">
+      <div>
+        <img src="https://picsum.photos/200" alt="">
+      </div>
+      <h2 class="font-bold text-center">Expert Opinion</h2>
+    </div>
+    <div class=" border border-blue-500 rounded-lg p-4">
+      <div>
+        <img src="https://picsum.photos/200" alt="">
+      </div>
+      <h2 class="font-bold text-center">Expert Opinion</h2>
+    </div>
+    <div class=" border border-blue-500 rounded-lg p-4">
+      <div>
+        <img src="https://picsum.photos/200" alt="">
+      </div>
+      <h2 class="font-bold text-center">Expert Opinion</h2>
+    </div>
+  </div>
+</div>
+<div class="w-full py-4 flex items-center justify-center" *ngIf="!tableShow">
+  <app-button buttonText="CLick For Invest" (click)="onClick()"></app-button>
+</div>
+<app-list *ngIf="tableShow"></app-list>
+<div class="w-full py-4 flex items-center justify-center" *ngIf="tableShow">
+  <app-button buttonText="Hide {{'Company'}} Lists" (click)="onClickHide()"></app-button>
+</div>

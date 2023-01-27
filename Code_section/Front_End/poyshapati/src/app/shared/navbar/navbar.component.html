@@ -4,24 +4,23 @@
   </div>
   <nav class="flex space-x-4 cursor-pointer items-center">
     <ul class="flex space-x-4 ">
-      <li (pointerover)="addToLocalStorage(menu)" (pointerleave)="removeFromLocalstorage(menu)" class="relative" *ngFor="let menu of menus"><a>{{menu.name}}</a>
-        <ul class="absolute left-0 top-[52px]" *ngIf="menu?.children && isActive(menu)">
-          <li class="bg-[#2B282C] w-48 px-4 py-1 border-b border-gray-500" *ngFor="let subMenu of menu?.children">
-            <a>{{subMenu.name}}</a>
-          </li>
-        </ul>
-      </li>
+      <ng-container *ngFor="let menu of menus">
+        <li *ngIf="menu.children" (pointerover)="addToLocalStorage(menu)" (pointerleave)="removeFromLocalstorage(menu)" class="relative h-full" ><a>{{menu.name}}</a>
+          <ul class="absolute left-0" *ngIf="isActive(menu)">
+            <li [routerLink]="subMenu.url" class="bg-[#2B282C] w-48 px-4 py-1 border-b border-gray-500" *ngFor="let subMenu of menu?.children">
+              <a>{{subMenu.name}}</a>
+            </li>
+          </ul>
+        </li>
+        <li [routerLink]="menu.url" *ngIf="!menu.children" (pointerover)="addToLocalStorage(menu)" (pointerleave)="removeFromLocalstorage(menu)" class="relative h-full" ><a>{{menu.name}}</a>
+        </li>
+      </ng-container>
     </ul>
-    <div class="">
-      <app-button buttonText="Login">
-        <a href=""></a>
-      </app-button>
-    </div>
   </nav>
   <div class="flex space-x-2 items-center">
     <a href=""><i class="fa-brands fa-facebook"></i></a>
-    <a href=""><i class="fa-brands fa-facebook"></i></a>
-    <a href=""><i class="fa-brands fa-facebook"></i></a>
-    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
+    <a href=""><i class="fa-brands fa-linkedin"></i></a>
   </div>
 </section>

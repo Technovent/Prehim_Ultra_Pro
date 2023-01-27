@@ -8,6 +8,7 @@ import { TutorialComponent } from './tutorial/tutorial.component';
 import { InvestmentCategoryComponent } from './investment-category/investment-category.component';
 import { InputTextComponent } from './input-text/input-text.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {ListComponent} from "./list/list.component";
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -15,15 +16,18 @@ import {ReactiveFormsModule} from "@angular/forms";
         ButtonComponent,
         TutorialComponent,
         InvestmentCategoryComponent,
-        InputTextComponent
+        InputTextComponent,
+        ListComponent
     ],
-  exports: [
-    NavbarComponent,
-    FooterComponent,
-    TutorialComponent,
-    InputTextComponent,
-    ButtonComponent
-  ],
+    exports: [
+        NavbarComponent,
+        FooterComponent,
+        TutorialComponent,
+        InputTextComponent,
+        ButtonComponent,
+        InvestmentCategoryComponent,
+        ListComponent
+    ],
     imports: [
         CommonModule,
         RouterLink,
