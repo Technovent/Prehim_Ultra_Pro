@@ -1,0 +1,60 @@
+
+<div
+  class="flex flex-col w-full"
+  [ngClass]="{ 'text-red-500': control &&control.touched &&control.invalid}"
+>
+  <div
+    [ngClass]="{ 'items-stretch': rows >= 2 }"
+    class="grid  grid-cols-8 w-full"
+  >
+    <label class="font-bold flex items-end text-left mr-4 col-span-2" [ngClass]="{ 'items-center': control
+      &&control.touched
+      &&control.invalid}">{{ label }}</label>
+    <div
+      [ngClass]="{
+        '!border-red-500': control.touched && control.invalid,
+        '!border-gray-500': control && control.value
+      }"
+      class="border-b print:border-0 border-gray-400 col-span-6 hover:border-gray-500 flex items-center flex-1"
+    >
+      <input
+        (keyup.enter)="rightButtonClicked.emit(true)"
+        *ngIf="rows < 2"
+        [formControl]='control'
+        class="w-full p-1 border-0 text-xs focus:ring-0 focus:outline-0"
+        [type]="inputType"
+        [placeholder]="placeholder"
+      />
+      <textarea
+        [rows]="rows"
+        *ngIf="rows >= 2"
+        [formControl]="control"
+        class="w-full p-1 border-0 text-xs focus:ring-0"
+        [placeholder]="placeholder"
+      ></textarea>
+      <button
+        (click)="rightButtonClicked.emit()"
+        type="button"
+        class="print:hidden p-1 text-sm"
+        *ngIf="rightIcon"
+      >
+        <i class="fa-solid fa-{{ rightIcon }}"></i>
+      </button>
+    </div>
+  </div>
+
+  <ng-container *ngIf="control">
+    <div
+      class="flex flex-col items-end w-full"
+      *ngIf="control.touched && control.invalid"
+    >
+      <span *ngIf="control.hasError('required')"
+      >{{ label || "This field" }} is required!</span
+      >
+    </div>
+  </ng-container>
+</div>
+
+
+
+

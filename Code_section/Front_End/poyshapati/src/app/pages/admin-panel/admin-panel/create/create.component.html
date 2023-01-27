@@ -1,0 +1,16 @@
+<div class="p-4">
+  <div class="w-[600px] border border-blue-500 rounded rounded-lg">
+    <div class="px-2 py-2 bg-blue-500 text-white">
+      <h3><i class="fa-solid fa-plus mr-2"></i>Add new Company</h3>
+    </div>
+    <form class="p-4 flex flex-col space-y-4" [formGroup]="customerForm" (ngSubmit)="$onCreateNewCustomer(customerForm)" >
+      <app-input-text inputType="text" label="Company Name" [control]="customerForm.get('companyName')"></app-input-text>
+      <app-input-text inputType="text" label="Gross Profit" [control]="customerForm.get('grossProfit')"></app-input-text>
+      <app-input-text inputType="text" label="Net Profit" [control]="customerForm.get('netProfit')"></app-input-text>
+      <app-input-text inputType="text" label="Valuation" [control]="customerForm.get('valuation')"></app-input-text>
+      <app-input-text inputType="text" label="Equity Sale Price" [control]="customerForm.get('equitySalePrice')"></app-input-text>
+      <app-button class="self-center" buttonText="Add Company Data"></app-button>
+    </form>
+  </div>
+
+</div>
