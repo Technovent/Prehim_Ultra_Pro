@@ -1,0 +1,72 @@
+.c {
+  min-height: 95vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  padding-top: 70px;
+}
+
+.images {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.vote {
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.038);
+  border-radius: 5px;
+}
+.from {
+  width: 40vw;
+}
+.button {
+  width: fit-content;
+  padding: 10px 40px;
+}
+.title-p {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background-color: white;
+  border-radius: 100%;
+  line-height: 1;
+}
+.main-row{
+display: flex;
+gap: 10px;
+}
+
+.b1{
+    margin-top: 30px;
+}
