@@ -36,4 +36,14 @@ export class NavbarComponent {
     }
 
   ]
+  expanded: boolean;
+  addToLocalStorage(menu) {
+    localStorage.setItem('active', menu.name)
+  }
+  removeFromLocalstorage(menu) {
+    localStorage.removeItem('active')
+  }
+  isActive(menu) {
+    return localStorage.getItem('active') === menu.name
+  }
 }

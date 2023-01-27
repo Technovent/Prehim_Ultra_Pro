@@ -4,16 +4,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonComponent } from './button/button.component';
 import {RouterLink} from "@angular/router";
+import { TutorialComponent } from './tutorial/tutorial.component';
 @NgModule({
     declarations: [
         NavbarComponent,
         FooterComponent,
-        ButtonComponent
+        ButtonComponent,
+        TutorialComponent
     ],
-  exports: [
-    NavbarComponent,
-    FooterComponent
-  ],
+    exports: [
+        NavbarComponent,
+        FooterComponent,
+        TutorialComponent
+    ],
   imports: [
     CommonModule,
     RouterLink

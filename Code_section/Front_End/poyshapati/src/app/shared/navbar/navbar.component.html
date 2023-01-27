@@ -1,22 +1,24 @@
-<section class="flex w-full">
-  <div>
+<section class="flex w-full justify-between  text-white mx-auto container ">
+  <div class="w-64">
     <img src="assets/images/logo.png" alt="">
   </div>
-  <nav>
-    <ul>
-      <li *ngFor="let menu of menus"><a>{{menu.name}}</a>
-        <ul *ngIf="menu?.children">
-          <li *ngFor="let subMenu of menu?.children">
+  <nav class="flex space-x-4 cursor-pointer items-center">
+    <ul class="flex space-x-4 ">
+      <li (pointerover)="addToLocalStorage(menu)" (pointerleave)="removeFromLocalstorage(menu)" class="relative" *ngFor="let menu of menus"><a>{{menu.name}}</a>
+        <ul class="absolute left-0 top-[52px]" *ngIf="menu?.children && isActive(menu)">
+          <li class="bg-[#2B282C] w-48 px-4 py-1 border-b border-gray-500" *ngFor="let subMenu of menu?.children">
             <a>{{subMenu.name}}</a>
           </li>
         </ul>
       </li>
     </ul>
-    <app-button buttonText="Login">
-      <a href=""></a>
-    </app-button>
+    <div class="">
+      <app-button buttonText="Login">
+        <a href=""></a>
+      </app-button>
+    </div>
   </nav>
-  <div class="flex space-x-2">
+  <div class="flex space-x-2 items-center">
     <a href=""><i class="fa-brands fa-facebook"></i></a>
     <a href=""><i class="fa-brands fa-facebook"></i></a>
     <a href=""><i class="fa-brands fa-facebook"></i></a>
