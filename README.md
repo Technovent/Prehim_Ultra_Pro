@@ -12,6 +12,29 @@ Solution:
 
 Our web app named poyshapati made by web 3.0 technology. This application have three features such as direct company investment, mutual fund and share market.
 
+![image](https://user-images.githubusercontent.com/48309038/215236396-bd4fe2f4-ff8d-448e-bcfc-b9554c5e0238.png)
+
+So, here we have two phase for every sector. First of all how to investment learning phase. Here we provide expert opinion, tutorial and game to learn about that.
+![image](https://user-images.githubusercontent.com/48309038/215236526-1a2afe8c-04d3-4e1a-abf2-08b7a718f9d1.png)
+![image](https://user-images.githubusercontent.com/48309038/215236534-398dcb27-7fd0-4409-ad75-c250679010e9.png)
+
+Then we forecast companies data in several sector.
+
+![image](https://user-images.githubusercontent.com/48309038/215236544-ae1a6e46-9b0d-4d61-8eff-ee015a260279.png)
+
+Then we have two system , in transection. Either we will do classical money transfer or use blockchain.
+
+![image](https://user-images.githubusercontent.com/48309038/215236632-ac8f3487-6b81-4357-abb2-88e1c76f625e.png)
+![image](https://user-images.githubusercontent.com/48309038/215236638-77b2efdf-737f-4369-b976-ff5d3d8a721d.png)
+![image](https://user-images.githubusercontent.com/48309038/215236642-c23fd86a-c84c-4cd3-88a9-7acf496578c4.png)
+
+In this system we will use stabble coin such as usdp.
+
+Future Scope: 
+Investor will get NFT after every accquisition.
+
+
+
 
 
 
